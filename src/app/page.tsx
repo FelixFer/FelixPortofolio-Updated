@@ -311,6 +311,7 @@ export default function Home() {
           </Carousel3>
         </Modal3>
       </main>
+      {/* detele one you see it again */}
     </div>
   )
 }
