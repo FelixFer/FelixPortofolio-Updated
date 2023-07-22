@@ -16,6 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <title>Felix Ferdinand</title>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )

@@ -25,3 +25,15 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+
+::selection {
+  background: #5eead4;
+  color: #1c615b;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+}

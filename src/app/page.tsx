@@ -1,113 +1,316 @@
+"use client";
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image'
+import { AiOutlineInstagram, AiFillLinkedin, AiFillGithub, AiOutlineWhatsApp } from 'react-icons/ai'
+import { BiLogoGmail } from 'react-icons/bi'
+import { RxArrowTopRight } from 'react-icons/rx'
+import hangulClassification from '../../public/img/hangul-prediction.png'
+import djongWeather from '../../public/img/djong-weather.png'
+import seiyou from '../../public/img/seiyou.png'
+import quicRecipe from '../../public/img/quickrecipe.png'
+import gebetApp from '../../public/img/gebetApp.png';
+import gebetApp1 from '../../public/img/gebetApp1.png'
+import gebetApp2 from '../../public/img/gebetApp2.png'
+import gebetApp3 from '../../public/img/gebetApp3.png'
+import gebetApp4 from '../../public/img/gebetApp4.png'
+import sandYay1 from '../../public/img/sandYay1.png'
+import sandYay2 from '../../public/img/sandYay2.png'
+import sandYay3 from '../../public/img/sandYay3.png'
+import sandYay4 from '../../public/img/sandYay4.png'
+import hangul1 from '../../public/img/hangul1.jpg'
+import hangul2 from '../../public/img/hangul2.jpg'
+import hangul3 from '../../public/img/hangul3.jpg'
+import Modal1 from './components/modal1';
+import Carousel1 from './components/carousel1';
+import Modal2 from './components/modal2';
+import Carousel2 from './components/carousel2';
+import Modal3 from './components/modal3';
+import Carousel3 from './components/carousel3';
+
+const slides1 = [hangul1, hangul2, hangul3]
+const slides2 = [gebetApp1, gebetApp2, gebetApp3, gebetApp4]
+const slides3 = [sandYay1, sandYay2, sandYay3, sandYay4]
 
 export default function Home() {
+  const [activeLink, setActiveLink] = useState('about');
+  const [open1, setOpen1] = useState(false);
+  const [open2, setOpen2] = useState(false);
+  const [open3, setOpen3] = useState(false);
+
+  const handleOpenModal = (modalType: number) => {
+    if (modalType === 1) setOpen1(true);
+    if (modalType === 2) setOpen2(true);
+    if (modalType === 3) setOpen3(true);
+  }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll('section');
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionBottom = sectionTop + section.offsetHeight;
+        if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+          setActiveLink(section.id);
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
+    <div className='lg:min-h-screen lg:grid lg:grid-cols-[45%_55%] bg-gradient-to-br from-indigo-950 to-slate-950 p-5 lg:p-0'>
+      <aside className='sm:mx-10 lg:h-screen lg:sticky lg:top-0 lg:pt-20 lg:px-20 lg:flex lg:flex-col'>
+        <div>
+          <h1 className='text-slate-200 text-3xl sm:text-4xl lg:text-5xl my-6 lg:mt-0 font-bold'>Felix Ferdinand</h1>
+          <h3 className='text-slate-400 sm:text-sm lg:text-lg xl:text-xl'>Informatics Engineering Student at Universitas Multimedia Nusantara</h3>
+          {/* <i className='text-slate-600 mb-20 lg:mb-0 sm:mx-10 lg:mx-0'>&quot;Once you start and its hard to stop, thats what you call addiction.&quot;</i> */}
+          <div className='mt-20 hidden lg:block'>
+            <ul className='text-slate-500 font-bold'>
+              <li className={`my-4 hover:text-slate-300 hover:tracking-widest cursor-pointer ${activeLink === 'about' ? 'text-slate-300 tracking-widest' : ''}`}><a href="#about">About</a></li>
+              <li className={`my-4 hover:text-slate-300 hover:tracking-widest cursor-pointer ${activeLink === 'experience' ? 'text-slate-300 tracking-widest' : ''}`}><a href="#experience">Experience</a></li>
+              <li className={`my-4 hover:text-slate-300 hover:tracking-widest cursor-pointer ${activeLink === 'project' ? 'text-slate-300 tracking-widest' : ''}`}><a href="#project">Project</a></li>
+            </ul>
+          </div>
+        </div>
+        <div className='flex flex-row gap-3 text-3xl text-slate-400 mt-5 mb-20 lg:mt-auto'>
+          <a href="mailto:felixfdnd@gmail.com">
+            <BiLogoGmail className='cursor-pointer hover:text-slate-50' />
+          </a>
+          <a href="https://www.linkedin.com/in/felix-ferdinand-46392a1b7/" target='_blank'>
+            <AiFillLinkedin className='cursor-pointer hover:text-slate-50' />
+          </a>
+          <a href="https://wa.me/082371176527" target='_blank'>
+            <AiOutlineWhatsApp className='cursor-pointer hover:text-slate-50' />
+          </a>
+          <a href="https://github.com/FelixFer" target='_blank'>
+            <AiFillGithub className='cursor-pointer hover:text-slate-50' />
+          </a>
+          <a href="https://www.instagram.com/felferdinand/" target='_blank'>
+            <AiOutlineInstagram className='cursor-pointer hover:text-slate-50' />
           </a>
         </div>
-      </div>
+      </aside>
+      <main className='lg:pb-20 lg:pr-20'>
+        <section className='lg:pt-20 lg:mx-5' id='about'>
+          <nav className='sticky top-0 drop-shadow backdrop-blur-3xl lg:hidden'>
+            <h4 className='text-slate-300 font-bold mb-8 py-2 sm:mx-10'>ABOUT</h4>
+          </nav>
+          <p className='text-slate-500 mb-20 lg:mb-0 sm:mx-10 lg:ml-0'>I possess a strong passion for both Website Development and Application Development, and I am currently seeking opportunities to gain valuable work experience in these fields. My background includes experience in website development and mobile application development, which has provided me with a solid foundation and a drive to excel further in these areas.
+            <br /> <br />
+            However, I am not limiting myself solely to these domains. I am genuinely enthusiastic about exploring new and diverse aspects of Information Technology. I am eager to embrace learning opportunities and expand my skills in various IT fields. My curiosity and adaptability make me confident in taking on challenges beyond my current expertise.
+            <br /> <br />
+            I am committed to contributing my best efforts and leveraging my existing knowledge to make a meaningful impact in the projects I am involved in. I am excited to collaborate with passionate teams and contribute to innovative solutions that positively impact the world.</p>
+        </section>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        <section className='lg:pt-20' id='experience'>
+          <nav className='sticky top-0 drop-shadow backdrop-blur-3xl lg:hidden'>
+            <h4 className='text-slate-300 font-bold mb-8 py-2 sm:mx-10'>EXPERIENCE</h4>
+          </nav>
+          <div className='mb-20 lg:mb-0 sm:mx-10 lg:ml-0'>
+            <div className='mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
+              <p className='text-slate-500 text-sm'>Feb 2023 — June 2023</p>
+              <div className='sm:ml-4'>
+                <p className='text-slate-300 mt-2 sm:mt-0 hover:text-teal-400 lg:hover:text-slate-300'>Lab Assistant · Lab FTI Universitas Multimedia Nusantara</p>
+                <p className='text-slate-400 text-sm mb-2'>Volunteer</p>
+                <p className='text-slate-500 text-sm mb-3'>Teaching Introduction to Internet Technology course.</p>
+                <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>HTML</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>CSS</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>JavaScript</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>Bootstrap</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>jQuery</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>ReactJS</li>
+                </ul>
+              </div>
+            </div>
+            <div className='mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
+              <p className='text-slate-500 text-sm'>Aug 2022 — Dec 2022</p>
+              <div className='sm:ml-4'>
+                <p className='text-slate-300 mt-2 sm:mt-0 hover:text-teal-400 lg:hover:text-slate-300'>Mobile Developer · PT Central Artificial Intelligence</p>
+                <p className='text-slate-400 text-sm mb-2'>Internship</p>
+                <p className='text-slate-500 text-sm mb-3'>Integrating user interface of Central OCR mobile application.</p>
+                <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>React Native</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>JavaScript</li>
+                </ul>
+              </div>
+            </div>
+            <div className='mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
+              <p className='text-slate-500 text-sm'>Nov 2021 — Apr 2022</p>
+              <div className='sm:ml-4'>
+                <p className='text-slate-300 mt-2 sm:mt-0 hover:text-teal-400 lg:hover:text-slate-300'>Website Developer · TVONAIR 7.0</p>
+                <p className='text-slate-400 text-sm mb-2'>Committee</p>
+                <p className='text-slate-500 text-sm mb-3'>Develop and maintain TV On Air website.</p>
+                <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>HTML</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>CSS</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>JavaScript</li>
+                </ul>
+              </div>
+            </div>
+            <div className='mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
+              <p className='text-slate-500 text-sm'>Mar 2021 — Mar 2022</p>
+              <div className='sm:ml-4'>
+                <p className='text-slate-300 mt-2 sm:mt-0 hover:text-teal-400 lg:hover:text-slate-300'>IT & Web Department · UMN TV Gen 7</p>
+                <p className='text-slate-400 text-sm mb-2'>Organization</p>
+                <p className='text-slate-500 text-sm mb-3'>Develop and maintain UMN TV website.</p>
+                <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>HTML</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>CSS</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>JavaScript</li>
+                </ul>
+              </div>
+            </div>
+            <div className='sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
+              <p className='text-slate-500 text-sm'>May 2021 — Dec 2021</p>
+              <div className='sm:ml-4'>
+                <p className='text-slate-300 mt-2 sm:my-0 hover:text-teal-400 lg:hover:text-slate-300'>Website Developer · UMN Festival 2021</p>
+                <p className='text-slate-400 text-sm mb-2'>Committee</p>
+                <p className='text-slate-500 text-sm mb-3'>Integrating and maintain UMN Festival website.</p>
+                <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>React Native</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>JavaScript</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        <section className='lg:pt-20' id='project'>
+          <nav className='sticky top-0 drop-shadow backdrop-blur-3xl lg:hidden'>
+            <h4 className='text-slate-300 font-bold mb-8 py-2 sm:mx-10'>PROJECT</h4>
+          </nav>
+          <div className='mb-20 sm:mx-10 lg:ml-0'>
+            <div className='mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
+              <div className='sm:order-last sm:ml-4'>
+                <a className='text-slate-300 mt-2 flex cursor-pointer hover:text-teal-400 lg:hover:text-slate-300' onClick={() => handleOpenModal(1)}>Hangul Syllable Predicition &nbsp; <span className='text-slate-500'>(Not Published)</span><RxArrowTopRight /></a>
+                <p className='text-slate-400 text-sm mb-2'>Thesis Project</p>
+                <p className='text-slate-500 text-sm mb-3'>Mobile application for handwriting classification of Korean language syllables. The model used in the application is trained using a machine learning algorithm, namely Convolutional Neural Network.</p>
+                <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>Python</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>Flask</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>Expo</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>JavaScript</li>
+                </ul>
+              </div>
+              <div className='bg-emerald-900 relative overflow-hidden rounded-lg w-80 sm:w-40 sm:h-28 lg:w-28 lg:h-16 xl:w-44 xl:h-28 mt-4 border-2 border-slate-600 hover:border-slate-500 sm:order-first'>
+                <Image src={hangulClassification} alt='Hangul Syllables Classification App' objectFit='cover' />
+              </div>
+            </div>
+            <div className='mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
+              <div className='sm:order-last sm:ml-4'>
+                <a className='text-slate-300 mt-2 flex cursor-pointer hover:text-teal-400 lg:hover:text-slate-300' href='https://sei-you.vercel.app/welcome' target='_blank'>SeiYou<RxArrowTopRight /></a>
+                <p className='text-slate-400 text-sm mb-2'>Group Project</p>
+                <p className='text-slate-500 text-sm mb-3'>Application for people that like voice acting. People can upload their voice acting and other people&apos;s voice acting.</p>
+                <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>Ionic React</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>JavaScript</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>TypeScript</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>CSS</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>Firebase</li>
+                </ul>
+              </div>
+              <div className='bg-emerald-900 relative overflow-hidden rounded-lg w-80 sm:w-40 sm:h-28 lg:w-28 lg:h-16 xl:w-44 xl:h-28 mt-4 border-2 border-slate-600 hover:border-slate-500'>
+                <Image src={seiyou} alt='SeiYou App' objectFit='cover' />
+              </div>
+            </div>
+            <div className='mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
+              <div className='sm:order-last sm:ml-4'>
+                <a className='text-slate-300 mt-2 flex cursor-pointer hover:text-teal-400 lg:hover:text-slate-300' onClick={() => handleOpenModal(2)}>Gebet App &nbsp;<span className='text-slate-500'>(Not Published)</span><RxArrowTopRight /></a>
+                <p className='text-slate-400 text-sm mb-2'>Course Project</p>
+                <p className='text-slate-500 text-sm mb-3'>Dating app-like application.</p>
+                <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>Ionic React</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>JavaScript</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>TypeScript</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>CSS</li>
+                </ul>
+              </div>
+              <div className='bg-emerald-900 relative overflow-hidden rounded-lg w-80 sm:w-40 sm:h-28 lg:w-28 lg:h-16 xl:w-44 xl:h-28 mt-4 border-2 border-slate-600 hover:border-slate-500'>
+                <Image src={gebetApp} alt='SeiYou App' objectFit='cover' />
+              </div>
+            </div>
+            <div className='mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
+              <div className='sm:order-last sm:ml-4'>
+                <a className='text-slate-300 mt-2 flex cursor-pointer hover:text-teal-400 lg:hover:text-slate-300' href='https://play.google.com/store/apps/details?id=quick_recipe.didi_x_djongers' target='_blank'>Quick Recipe<RxArrowTopRight /></a>
+                <p className='text-slate-400 text-sm mb-2'>Group Project</p>
+                <p className='text-slate-500 text-sm mb-3'>Mobile application to find food recipe. People can also upload their recipe.</p>
+                <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>Java</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>XML</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>Firebase</li>
+                </ul>
+              </div>
+              <div className='bg-emerald-900 relative overflow-hidden rounded-lg w-80 sm:w-40 sm:h-28 lg:w-28 lg:h-16 xl:w-44 xl:h-28 mt-4 border-2 border-slate-600 hover:border-slate-500'>
+                <Image src={quicRecipe} alt='Hangul Syllables Classification App' objectFit='cover' />
+              </div>
+            </div>
+            <div className='mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
+              <div className='sm:order-last sm:ml-4'>
+                <a className='text-slate-300 mt-2 flex cursor-pointer hover:text-teal-400 lg:hover:text-slate-300' onClick={() => handleOpenModal(3)}>SandwichYay &nbsp;<span className='text-slate-500'>(Not Published)</span><RxArrowTopRight /></a>
+                <p className='text-slate-400 text-sm mb-2'>Group Project</p>
+                <p className='text-slate-500 text-sm mb-3'>Website to make food order. Including admin dashboard section, where admins can restock and manage transactions.</p>
+                <ul flex-wrap className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>CodeIgniter4</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>PHP</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>HTML</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>CSS</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>JavaScript</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>MySQL</li>
+                </ul>
+              </div>
+              <div className='bg-emerald-900 relative overflow-hidden rounded-lg w-80 sm:w-40 sm:h-20 lg:w-28 lg:h-14 xl:w-44 xl:h-20 mt-4 border-2 border-slate-600 hover:border-slate-500'>
+                <Image src={sandYay1} alt='Hangul Syllables Classification App' objectFit='cover' />
+              </div>
+            </div>
+            <div className='mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
+              <div className='sm:order-last sm:ml-4'>
+                <a className='text-slate-300 mt-2 flex cursor-pointer hover:text-teal-400 lg:hover:text-slate-300' href='https://djong-weather.vercel.app/' target='_blank'>Djongers Weather <RxArrowTopRight /></a>
+                <p className='text-slate-400 text-sm mb-2'>Group Project</p>
+                <p className='text-slate-500 text-sm mb-3'>Website to check weather of all cities around the world.</p>
+                <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>ReactJS</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>JavaScript</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>HTML</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>CSS</li>
+                </ul>
+              </div>
+              <div className='bg-emerald-900 relative overflow-hidden rounded-lg w-80 sm:w-40 sm:h-20 lg:w-28 lg:h-14 xl:w-44 xl:h-20 mt-4 border-2 border-slate-600 hover:border-slate-500'>
+                <Image src={djongWeather} alt='Hangul Syllables Classification App' objectFit='cover' />
+              </div>
+            </div>
+          </div>
+        </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        <p className='text-slate-500 text-sm mb-6 lg:mb-0 sm:mx-10 lg:ml-5'>Coded in <span className='text-slate-400'>Visual Studio Code</span> by <span className='text-slate-400'>Felix Ferdinand</span>. Built with <span className='text-slate-400'>Next.js</span> and <span className='text-slate-400'>Tailwind CSS</span>, deployed with <span className='text-slate-400'>Vercel</span>. Last modified on July 22, 2023.</p>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
+        <Modal1 open={open1} onClose={() => setOpen1(false)}>
+          <Carousel1>
+            {slides1.map((s) => (
+              <Image src={s} key={1} alt='carousel' className='rounded' />
+            ))}
+          </Carousel1>
+        </Modal1>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        <Modal2 open={open2} onClose={() => setOpen2(false)}>
+          <Carousel2>
+            {slides2.map((s) => (
+              <Image src={s} key={1} alt='carousel' className='rounded' />
+            ))}
+          </Carousel2>
+        </Modal2>
+
+        <Modal3 open={open3} onClose={() => setOpen3(false)}>
+          <Carousel3>
+            {slides3.map((s) => (
+              <Image src={s} key={1} alt='carousel' className='rounded' />
+            ))}
+          </Carousel3>
+        </Modal3>
+      </main>
+    </div>
   )
 }
