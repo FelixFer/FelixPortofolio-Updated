@@ -255,7 +255,7 @@ export default function Home() {
                 <p className='text-slate-400 text-sm mb-2'>Group Project</p>
                 <p className='text-slate-500 text-sm mb-3'>Website to make food order. Including admin dashboard section, where admins can restock and manage transactions.</p>
                 <ul flex-wrap className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
-                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>CodeIgniter4</li>
+                  {/* <li className='rounded-xl bg-cyan-950 px-2 py-1'>CodeIgniter4</li> */}
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>PHP</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>HTML</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>CSS</li>
