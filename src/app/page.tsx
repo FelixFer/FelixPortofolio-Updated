@@ -171,7 +171,8 @@ export default function Home() {
                 <p className='text-slate-400 text-sm mb-2'>Committee</p>
                 <p className='text-slate-500 text-sm mb-3'>Integrating and maintain UMN Festival website.</p>
                 <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
-                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>React Native</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>HTML</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>CSS</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>JavaScript</li>
                 </ul>
               </div>
