@@ -204,7 +204,7 @@ export default function Home() {
               <div className='sm:order-last sm:ml-4'>
                 <a className='text-slate-300 mt-2 flex cursor-pointer hover:text-teal-400 lg:hover:text-slate-300' href='https://sei-you.vercel.app/welcome' target='_blank'>SeiYou<RxArrowTopRight /></a>
                 <p className='text-slate-400 text-sm mb-2'>Group Project</p>
-                <p className='text-slate-500 text-sm mb-3'>Application for people that like voice acting. People can upload their voice acting and other people&apos;s voice acting.</p>
+                <p className='text-slate-500 text-sm mb-3'>Application for people that like voice acting. People can upload their voice acting and search other people&apos;s voice acting.</p>
                 <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>Ionic React</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>JavaScript</li>
