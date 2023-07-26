@@ -20,27 +20,41 @@ import sandYay4 from '../../public/img/sandYay4.png'
 import hangul1 from '../../public/img/hangul1.jpg'
 import hangul2 from '../../public/img/hangul2.jpg'
 import hangul3 from '../../public/img/hangul3.jpg'
+import ocr from '../../public/img/ocr.png'
+import ocr1 from '../../public/img/ocr1.jpg'
+import ocr2 from '../../public/img/ocr2.jpg'
+import ocr3 from '../../public/img/ocr3.jpg'
+import ocr4 from '../../public/img/ocr4.jpg'
+import ocr5 from '../../public/img/ocr5.jpg'
+import ocr6 from '../../public/img/ocr6.jpg'
+import ocr7 from '../../public/img/ocr7.jpg'
+import ocr8 from '../../public/img/ocr8.jpg'
 import Modal1 from './components/modal1';
 import Carousel1 from './components/carousel1';
 import Modal2 from './components/modal2';
 import Carousel2 from './components/carousel2';
 import Modal3 from './components/modal3';
 import Carousel3 from './components/carousel3';
+import Modal4 from './components/modal4';
+import Carousel4 from './components/carousel4';
 
 const slides1 = [hangul1, hangul2, hangul3]
 const slides2 = [gebetApp1, gebetApp2, gebetApp3, gebetApp4]
 const slides3 = [sandYay1, sandYay2, sandYay3, sandYay4]
+const slides4 = [ocr1, ocr2, ocr3, ocr4, ocr5, ocr6, ocr7, ocr8]
 
 export default function Home() {
   const [activeLink, setActiveLink] = useState('about');
   const [open1, setOpen1] = useState(false);
   const [open2, setOpen2] = useState(false);
   const [open3, setOpen3] = useState(false);
+  const [open4, setOpen4] = useState(false);
 
   const handleOpenModal = (modalType: number) => {
     if (modalType === 1) setOpen1(true);
     if (modalType === 2) setOpen2(true);
     if (modalType === 3) setOpen3(true);
+    if (modalType === 4) setOpen4(true);
   }
 
   useEffect(() => {
@@ -61,8 +75,8 @@ export default function Home() {
     };
   }, []);
   return (
-    <div className='lg:min-h-screen lg:grid lg:grid-cols-[45%_55%] bg-gradient-to-br from-indigo-950 to-slate-950 p-5 lg:p-0'>
-      <aside className='sm:mx-10 lg:h-screen lg:sticky lg:top-0 lg:pt-20 lg:px-20 lg:flex lg:flex-col'>
+    <div className='lg:min-h-screen lg:grid lg:grid-cols-[45%_55%] bg-gradient-to-br from-indigo-950 to-slate-950 py-5 lg:p-0'>
+      <aside className='sm:mx-10 lg:h-screen lg:sticky lg:top-0 lg:pt-20 lg:px-20 lg:flex lg:flex-col px-5'>
         <div>
           <h1 className='text-slate-200 text-3xl sm:text-4xl lg:text-5xl my-6 lg:mt-0 font-bold'>Felix Ferdinand</h1>
           <h3 className='text-slate-400 sm:text-sm lg:text-lg xl:text-xl'>Informatics Engineering Student at Universitas Multimedia Nusantara</h3>
@@ -95,10 +109,10 @@ export default function Home() {
       </aside>
       <main className='lg:pb-20 lg:pr-20'>
         <section className='lg:pt-20 lg:mx-5' id='about'>
-          <nav className='sticky top-0 drop-shadow backdrop-blur-3xl lg:hidden'>
+          <nav className='sticky top-0 drop-shadow backdrop-blur-3xl px-5 z-50 lg:hidden'>
             <h4 className='text-slate-300 font-bold mb-8 py-2 sm:mx-10'>ABOUT</h4>
           </nav>
-          <p className='text-slate-500 mb-20 lg:mb-0 sm:mx-10 lg:ml-0'>I possess a strong passion for both Website Development and Application Development, and I am currently seeking opportunities to gain valuable work experience in these fields. My background includes experience in website development and mobile application development, which has provided me with a solid foundation and a drive to excel further in these areas.
+          <p className='text-slate-500 mb-20 lg:mb-0 sm:mx-10 lg:ml-0 px-5'>I possess a strong passion for both Website Development and Application Development, and I am currently seeking opportunities to gain valuable work experience in these fields. My background includes experience in website development and mobile application development, which has provided me with a solid foundation and a drive to excel further in these areas.
             <br /> <br />
             However, I am not limiting myself solely to these domains. I am genuinely enthusiastic about exploring new and diverse aspects of Information Technology. I am eager to embrace learning opportunities and expand my skills in various IT fields. My curiosity and adaptability make me confident in taking on challenges beyond my current expertise.
             <br /> <br />
@@ -106,10 +120,10 @@ export default function Home() {
         </section>
 
         <section className='lg:pt-20' id='experience'>
-          <nav className='sticky top-0 drop-shadow backdrop-blur-3xl lg:hidden'>
+          <nav className='sticky top-0 drop-shadow backdrop-blur-3xl px-5 z-50 lg:hidden'>
             <h4 className='text-slate-300 font-bold mb-8 py-2 sm:mx-10'>EXPERIENCE</h4>
           </nav>
-          <div className='mb-20 lg:mb-0 sm:mx-10 lg:ml-0'>
+          <div className='mb-20 px-5 lg:mb-0 sm:mx-10 lg:ml-0'>
             <div className='mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
               <p className='text-slate-500 text-sm'>Feb 2023 — June 2023</p>
               <div className='sm:ml-4'>
@@ -177,14 +191,22 @@ export default function Home() {
                 </ul>
               </div>
             </div>
+            <div className='sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
+              <p className='text-slate-500 text-sm'>Mar 2021 — Aug 2021</p>
+              <div className='sm:ml-4'>
+                <p className='text-slate-300 mt-2 sm:my-0 hover:text-teal-400 lg:hover:text-slate-300'>Security Division · Orientasi Mahasiswa Baru (OMB) UMN 2021</p>
+                <p className='text-slate-400 text-sm mb-2'>Committee</p>
+                <p className='text-slate-500 text-sm mb-3'>Maintaining the security and discipline of all participants, both the committee and the participants, so that OMB run smoothly.</p>
+              </div>
+            </div>
           </div>
         </section>
 
         <section className='lg:pt-20' id='project'>
-          <nav className='sticky top-0 drop-shadow backdrop-blur-3xl lg:hidden'>
+          <nav className='sticky top-0 drop-shadow backdrop-blur-3xl px-5 z-10 lg:hidden'>
             <h4 className='text-slate-300 font-bold mb-8 py-2 sm:mx-10'>PROJECT</h4>
           </nav>
-          <div className='mb-20 sm:mx-10 lg:ml-0'>
+          <div className='mb-20 px-5 sm:mx-10 lg:ml-0'>
             <div className='mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
               <div className='sm:order-last sm:ml-4'>
                 <a className='text-slate-300 mt-2 flex cursor-pointer hover:text-teal-400 lg:hover:text-slate-300' onClick={() => handleOpenModal(1)}>Hangul Syllable Predicition &nbsp; <span className='text-slate-500'>(Not Published)</span><RxArrowTopRight /></a>
@@ -199,6 +221,20 @@ export default function Home() {
               </div>
               <div className='bg-emerald-900 relative overflow-hidden rounded-lg w-80 sm:w-40 sm:h-28 lg:w-28 lg:h-16 xl:w-44 xl:h-28 mt-4 border-2 border-slate-600 hover:border-slate-500 sm:order-first'>
                 <Image src={hangulClassification} alt='Hangul Syllables Classification App' objectFit='cover' />
+              </div>
+            </div>
+            <div className='mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
+              <div className='sm:order-last sm:ml-4'>
+                <a className='text-slate-300 mt-2 flex cursor-pointer hover:text-teal-400 lg:hover:text-slate-300' onClick={() => handleOpenModal(4)}>Central OCR &nbsp; <span className='text-slate-500'>(Not Published)</span><RxArrowTopRight /></a>
+                <p className='text-slate-400 text-sm mb-2'>Internship Project</p>
+                <p className='text-slate-500 text-sm mb-3'>A mobile application that uses the ocr feature to perform text extraction from various types of documents.</p>
+                <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>React Native</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>JavaScript</li>
+                </ul>
+              </div>
+              <div className='bg-emerald-900 relative overflow-hidden rounded-lg w-80 sm:w-40 sm:h-28 lg:w-28 lg:h-16 xl:w-44 xl:h-28 mt-4 border-2 border-slate-600 hover:border-slate-500 sm:order-first'>
+                <Image src={ocr} alt='Hangul Syllables Classification App' objectFit='cover' />
               </div>
             </div>
             <div className='mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
@@ -286,7 +322,7 @@ export default function Home() {
           </div>
         </section>
 
-        <p className='text-slate-500 text-sm mb-6 lg:mb-0 sm:mx-10 lg:ml-5'>Coded in <span className='text-slate-400'>Visual Studio Code</span> by <span className='text-slate-400'>Felix Ferdinand</span>. Built with <span className='text-slate-400'>Next.js</span> and <span className='text-slate-400'>Tailwind CSS</span>, deployed with <span className='text-slate-400'>Vercel</span>. Last modified on July 25, 2023.</p>
+        <p className='text-slate-500 text-sm mb-6 px-5 lg:mb-0 sm:mx-10 lg:ml-5'>Coded in <span className='text-slate-400'>Visual Studio Code</span> by <span className='text-slate-400'>Felix Ferdinand</span>. Built with <span className='text-slate-400'>Next.js</span> and <span className='text-slate-400'>Tailwind CSS</span>, deployed with <span className='text-slate-400'>Vercel</span>. Last modified on July 25, 2023.</p>
 
         <Modal1 open={open1} onClose={() => setOpen1(false)}>
           <Carousel1>
@@ -311,6 +347,14 @@ export default function Home() {
             ))}
           </Carousel3>
         </Modal3>
+
+        <Modal4 open={open4} onClose={() => setOpen4(false)}>
+          <Carousel4>
+            {slides4.map((s) => (
+              <Image src={s} key={1} alt='carousel' className='rounded' />
+            ))}
+          </Carousel4>
+        </Modal4>
       </main>
       {/* detele one you see it again */}
     </div>

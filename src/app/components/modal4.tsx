@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaTimes } from 'react-icons/fa'
 
-export default function Modal2({ open, onClose, children }: { open: boolean, onClose: any, children: any }) {
+export default function Modal4({ open, onClose, children }: { open: boolean, onClose: any, children: any }) {
     return (
         <div onClick={onClose} className={`z-20 fixed inset-0 flex justify-center transition-colors ${open ? 'visible bg-gradient-to-br from-indigo-950 to-slate-950' : 'invisible'}`}>
             <div onClick={(e) => e.stopPropagation()} className={`rounded-xl shadow my-auto w-80 p-8 transition-all ${open ? 'scale-100 opacity-100' : 'scale-125 opacity-0'}`}>
