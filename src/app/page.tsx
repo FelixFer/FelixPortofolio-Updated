@@ -79,13 +79,14 @@ export default function Home() {
       <aside className='sm:mx-10 lg:h-screen lg:sticky lg:top-0 lg:pt-20 lg:px-20 lg:flex lg:flex-col px-5'>
         <div>
           <h1 className='text-slate-200 text-3xl sm:text-4xl lg:text-5xl my-6 lg:mt-0 font-bold'>Felix Ferdinand</h1>
+          <h2 className='text-slate-300 sm:text-xl lg:text-2xl xl:text-3xl'>Backend Developer</h2>
           <h3 className='text-slate-400 sm:text-sm lg:text-lg xl:text-xl'>Informatics Engineering Student at Universitas Multimedia Nusantara</h3>
           {/* <i className='text-slate-600 mb-20 lg:mb-0 sm:mx-10 lg:mx-0'>&quot;Once you start and its hard to stop, thats what you call addiction.&quot;</i> */}
           <div className='mt-20 hidden lg:block'>
             <ul className='text-slate-500 font-bold'>
-              <li className={`my-4 hover:text-slate-300 hover:tracking-widest cursor-pointer ${activeLink === 'about' ? 'text-slate-300 tracking-widest' : ''}`}><a href="#about">About</a></li>
-              <li className={`my-4 hover:text-slate-300 hover:tracking-widest cursor-pointer ${activeLink === 'experience' ? 'text-slate-300 tracking-widest' : ''}`}><a href="#experience">Experience</a></li>
-              <li className={`my-4 hover:text-slate-300 hover:tracking-widest cursor-pointer ${activeLink === 'project' ? 'text-slate-300 tracking-widest' : ''}`}><a href="#project">Project</a></li>
+              <li className={`my-4 hover:text-slate-300 hover:tracking-widest cursor-pointer transition-all ${activeLink === 'about' ? 'text-slate-300 tracking-widest' : ''}`}><a href="#about">About</a></li>
+              <li className={`my-4 hover:text-slate-300 hover:tracking-widest cursor-pointer transition-all ${activeLink === 'experience' ? 'text-slate-300 tracking-widest' : ''}`}><a href="#experience">Experience</a></li>
+              <li className={`my-4 hover:text-slate-300 hover:tracking-widest cursor-pointer transition-all ${activeLink === 'project' ? 'text-slate-300 tracking-widest' : ''}`}><a href="#project">Project</a></li>
             </ul>
           </div>
         </div>
@@ -125,11 +126,34 @@ export default function Home() {
           </nav>
           <div className='mb-20 px-5 lg:mb-0 sm:mx-10 lg:ml-0'>
             <div className='mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
+              <p className='text-slate-500 text-sm'>Sep 2023 — Present</p>
+              <div className='sm:ml-4'>
+                <p className='text-slate-300 mt-2 sm:mt-0 hover:text-teal-400 lg:hover:text-slate-300'>Backend Developer · PT Ganda Visi Jayatama</p>
+                <p className='text-slate-400 text-sm mb-2'>Part Time</p>
+                <p className='text-slate-500 text-sm mb-3'>• Create Restful API using Express.js and Sequelize.</p>
+                <p className='text-slate-500 text-sm mb-3'>• Testing API using Postman.</p>
+                <p className='text-slate-500 text-sm mb-3'>• Design database schema using dbdiagram.</p>
+                <p className='text-slate-500 text-sm mb-3'>• Migration and seeding database using Sequelize and PostgreSQL.</p>
+                <p className='text-slate-500 text-sm mb-3'>• Collaborating on version control code using git.</p>
+                <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>Express.js</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>Sequelize</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>Typescript</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>Javascript</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>PostgreSQL</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>Node.js</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>Git</li>
+                </ul>
+              </div>
+            </div>
+            <div className='mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
               <p className='text-slate-500 text-sm'>Feb 2023 — June 2023</p>
               <div className='sm:ml-4'>
                 <p className='text-slate-300 mt-2 sm:mt-0 hover:text-teal-400 lg:hover:text-slate-300'>Lab Assistant · Lab FTI Universitas Multimedia Nusantara</p>
-                <p className='text-slate-400 text-sm mb-2'>Volunteer</p>
-                <p className='text-slate-500 text-sm mb-3'>Teaching Introduction to Internet Technology course.</p>
+                <p className='text-slate-400 text-sm mb-2'>Part Time</p>
+                <p className='text-slate-500 text-sm mb-3'>Teaching Introduction to Internet Technology course:</p>
+                <p className='text-slate-500 text-sm mb-3'>• Create basic website.</p>
+                <p className='text-slate-500 text-sm mb-3'>• Create website using CSS and JavaScript framework.</p>
                 <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>HTML</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>CSS</li>
@@ -145,10 +169,13 @@ export default function Home() {
               <div className='sm:ml-4'>
                 <p className='text-slate-300 mt-2 sm:mt-0 hover:text-teal-400 lg:hover:text-slate-300'>Mobile Developer · PT Central Artificial Intelligence</p>
                 <p className='text-slate-400 text-sm mb-2'>Internship</p>
-                <p className='text-slate-500 text-sm mb-3'>Integrating user interface of Central OCR mobile application.</p>
+                <p className='text-slate-500 text-sm mb-3'>• Create a mobile application using React Native as the Frontend based on the design given in Figma.</p>
+                <p className='text-slate-500 text-sm mb-3'>• Maintaining and update Central OCR mobile application.</p>
+                <p className='text-slate-500 text-sm mb-3'>• Collaborating on version control code using git.</p>
                 <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>React Native</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>JavaScript</li>
+                  <li className='rounded-xl bg-cyan-950 px-2 py-1'>Git</li>
                 </ul>
               </div>
             </div>
@@ -157,7 +184,7 @@ export default function Home() {
               <div className='sm:ml-4'>
                 <p className='text-slate-300 mt-2 sm:mt-0 hover:text-teal-400 lg:hover:text-slate-300'>Website Developer · TVONAIR 7.0</p>
                 <p className='text-slate-400 text-sm mb-2'>Committee</p>
-                <p className='text-slate-500 text-sm mb-3'>Develop and maintain TV On Air website.</p>
+                <p className='text-slate-500 text-sm mb-3'>Design, create, develop, and maintain TV On Air website.</p>
                 <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>HTML</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>CSS</li>
@@ -170,7 +197,7 @@ export default function Home() {
               <div className='sm:ml-4'>
                 <p className='text-slate-300 mt-2 sm:mt-0 hover:text-teal-400 lg:hover:text-slate-300'>IT & Web Department · UMN TV Gen 7</p>
                 <p className='text-slate-400 text-sm mb-2'>Organization</p>
-                <p className='text-slate-500 text-sm mb-3'>Develop and maintain UMN TV website.</p>
+                <p className='text-slate-500 text-sm mb-3'>Design, create, develop, and maintain UMN TV website.</p>
                 <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>HTML</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>CSS</li>
@@ -196,7 +223,8 @@ export default function Home() {
               <div className='sm:ml-4'>
                 <p className='text-slate-300 mt-2 sm:my-0 hover:text-teal-400 lg:hover:text-slate-300'>Security Division · Orientasi Mahasiswa Baru (OMB) UMN 2021</p>
                 <p className='text-slate-400 text-sm mb-2'>Committee</p>
-                <p className='text-slate-500 text-sm mb-3'>Maintaining the security and discipline of all participants, both the committee and the participants, so that OMB run smoothly.</p>
+                <p className='text-slate-500 text-sm mb-3'>• Supervise the flow of OMB.</p>
+                <p className='text-slate-500 text-sm mb-3'>• Maintain discipline of the committee and participants to obey OMB regulations.</p>
               </div>
             </div>
           </div>
@@ -322,7 +350,7 @@ export default function Home() {
           </div>
         </section>
 
-        <p className='text-slate-500 text-sm mb-6 px-5 lg:mb-0 sm:mx-10 lg:ml-5'>Coded in <span className='text-slate-400'>Visual Studio Code</span> by <span className='text-slate-400'>Felix Ferdinand</span>. Built with <span className='text-slate-400'>Next.js</span> and <span className='text-slate-400'>Tailwind CSS</span>, deployed with <span className='text-slate-400'>Vercel</span>. Last modified on July 26, 2023.</p>
+        <p className='text-slate-500 text-sm mb-6 px-5 lg:mb-0 sm:mx-10 lg:ml-5'>Coded in <span className='text-slate-400'>Visual Studio Code</span> by <span className='text-slate-400'>Felix Ferdinand</span>. Built with <span className='text-slate-400'>Next.js</span> and <span className='text-slate-400'>Tailwind CSS</span>, deployed with <span className='text-slate-400'>Vercel</span>. Last modified on December 4, 2023.</p>
 
         <Modal1 open={open1} onClose={() => setOpen1(false)}>
           <Carousel1>
