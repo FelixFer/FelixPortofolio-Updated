@@ -205,7 +205,7 @@ export default function Home() {
                 </ul>
               </div>
             </div>
-            <div className='sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
+            <div className='mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
               <p className='text-slate-500 text-sm'>May 2021 — Dec 2021</p>
               <div className='sm:ml-4'>
                 <p className='text-slate-300 mt-2 sm:my-0 hover:text-teal-400 lg:hover:text-slate-300'>Website Developer · UMN Festival 2021</p>
