@@ -130,10 +130,10 @@ export default function Home() {
               <div className='sm:ml-4'>
                 <p className='text-slate-300 mt-2 sm:mt-0 hover:text-teal-400 lg:hover:text-slate-300'>Backend Developer · PT Ganda Visi Jayatama</p>
                 <p className='text-slate-400 text-sm mb-2'>Part Time</p>
-                <p className='text-slate-500 text-sm mb-3'>• Create Restful API using Express.js and Sequelize.</p>
-                <p className='text-slate-500 text-sm mb-3'>• Testing API using Postman.</p>
-                <p className='text-slate-500 text-sm mb-3'>• Design database schema using dbdiagram.</p>
-                <p className='text-slate-500 text-sm mb-3'>• Migration and seeding database using Sequelize and PostgreSQL.</p>
+                <p className='text-slate-500 text-sm'>• Create Restful API using Express.js and Sequelize.</p>
+                <p className='text-slate-500 text-sm'>• Testing API using Postman.</p>
+                <p className='text-slate-500 text-sm'>• Design database schema using dbdiagram.</p>
+                <p className='text-slate-500 text-sm'>• Migration and seeding database using Sequelize and PostgreSQL.</p>
                 <p className='text-slate-500 text-sm mb-3'>• Collaborating on version control code using git.</p>
                 <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>Express.js</li>
@@ -151,8 +151,8 @@ export default function Home() {
               <div className='sm:ml-4'>
                 <p className='text-slate-300 mt-2 sm:mt-0 hover:text-teal-400 lg:hover:text-slate-300'>Lab Assistant · Lab FTI Universitas Multimedia Nusantara</p>
                 <p className='text-slate-400 text-sm mb-2'>Part Time</p>
-                <p className='text-slate-500 text-sm mb-3'>Teaching Introduction to Internet Technology course:</p>
-                <p className='text-slate-500 text-sm mb-3'>• Create basic website.</p>
+                <p className='text-slate-500 text-sm'>Teaching Introduction to Internet Technology course:</p>
+                <p className='text-slate-500 text-sm'>• Create basic website.</p>
                 <p className='text-slate-500 text-sm mb-3'>• Create website using CSS and JavaScript framework.</p>
                 <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>HTML</li>
@@ -169,8 +169,8 @@ export default function Home() {
               <div className='sm:ml-4'>
                 <p className='text-slate-300 mt-2 sm:mt-0 hover:text-teal-400 lg:hover:text-slate-300'>Mobile Developer · PT Central Artificial Intelligence</p>
                 <p className='text-slate-400 text-sm mb-2'>Internship</p>
-                <p className='text-slate-500 text-sm mb-3'>• Create a mobile application using React Native as the Frontend based on the design given in Figma.</p>
-                <p className='text-slate-500 text-sm mb-3'>• Maintaining and update Central OCR mobile application.</p>
+                <p className='text-slate-500 text-sm'>• Create a mobile application using React Native as the Frontend based on the design given in Figma.</p>
+                <p className='text-slate-500 text-sm'>• Maintaining and update Central OCR mobile application.</p>
                 <p className='text-slate-500 text-sm mb-3'>• Collaborating on version control code using git.</p>
                 <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>React Native</li>
@@ -223,7 +223,7 @@ export default function Home() {
               <div className='sm:ml-4'>
                 <p className='text-slate-300 mt-2 sm:my-0 hover:text-teal-400 lg:hover:text-slate-300'>Security Division · Orientasi Mahasiswa Baru (OMB) UMN 2021</p>
                 <p className='text-slate-400 text-sm mb-2'>Committee</p>
-                <p className='text-slate-500 text-sm mb-3'>• Supervise the flow of OMB.</p>
+                <p className='text-slate-500 text-sm'>• Supervise the flow of OMB.</p>
                 <p className='text-slate-500 text-sm mb-3'>• Maintain discipline of the committee and participants to obey OMB regulations.</p>
               </div>
             </div>
