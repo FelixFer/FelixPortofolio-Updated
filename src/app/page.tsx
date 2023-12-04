@@ -80,7 +80,7 @@ export default function Home() {
         <div>
           <h1 className='text-slate-200 text-3xl sm:text-4xl lg:text-5xl my-6 lg:mt-0 font-bold'>Felix Ferdinand</h1>
           <h2 className='text-slate-300 sm:text-xl lg:text-2xl xl:text-3xl'>Backend Developer</h2>
-          <h3 className='text-slate-400 sm:text-sm lg:text-lg xl:text-xl'>Informatics Engineering Student at Universitas Multimedia Nusantara</h3>
+          <h3 className='text-slate-400 sm:text-sm lg:text-lg xl:text-xl'>Graduate of Informatics Engineering from Universitas Multimedia Nusantara.</h3>
           {/* <i className='text-slate-600 mb-20 lg:mb-0 sm:mx-10 lg:mx-0'>&quot;Once you start and its hard to stop, thats what you call addiction.&quot;</i> */}
           <div className='mt-20 hidden lg:block'>
             <ul className='text-slate-500 font-bold'>
