@@ -78,9 +78,9 @@ export default function Home() {
     <div className='lg:min-h-screen lg:grid lg:grid-cols-[45%_55%] bg-gradient-to-br from-indigo-950 to-slate-950 py-5 lg:p-0'>
       <aside className='sm:mx-10 lg:h-screen lg:sticky lg:top-0 lg:pt-20 lg:px-20 lg:flex lg:flex-col px-5'>
         <div>
-          <h1 className='text-slate-200 text-3xl sm:text-4xl lg:text-5xl my-6 lg:mt-0 font-bold'>Felix Ferdinand</h1>
-          <h2 className='text-slate-300 sm:text-xl lg:text-2xl xl:text-3xl'>Backend Developer</h2>
-          <h3 className='text-slate-400 sm:text-sm lg:text-lg xl:text-xl'>Graduate of Informatics Engineering from Universitas Multimedia Nusantara.</h3>
+          <h1 className='text-center lg:text-left text-slate-200 text-3xl sm:text-4xl lg:text-5xl my-6 lg:mt-0 font-bold'>Felix Ferdinand</h1>
+          <h2 className='text-center lg:text-left text-slate-300 sm:text-xl lg:text-2xl xl:text-3xl'>Backend Developer</h2>
+          <h3 className='text-center lg:text-left text-slate-400 sm:text-sm lg:text-lg xl:text-xl'>Graduate of Informatics Engineering from Universitas Multimedia Nusantara</h3>
           {/* <i className='text-slate-600 mb-20 lg:mb-0 sm:mx-10 lg:mx-0'>&quot;Once you start and its hard to stop, thats what you call addiction.&quot;</i> */}
           <div className='mt-20 hidden lg:block'>
             <ul className='text-slate-500 font-bold'>
@@ -90,7 +90,7 @@ export default function Home() {
             </ul>
           </div>
         </div>
-        <div className='flex flex-row gap-3 text-3xl text-slate-400 mt-5 mb-20 lg:mt-auto'>
+        <div className='justify-center lg:justify-start flex flex-row gap-3 text-3xl text-slate-400 mt-5 mb-20 lg:mt-auto'>
           <a href="mailto:felixfdnd@gmail.com">
             <BiLogoGmail className='cursor-pointer hover:text-slate-50' />
           </a>
@@ -111,9 +111,9 @@ export default function Home() {
       <main className='lg:pb-20 lg:pr-20'>
         <section className='lg:pt-20 lg:mx-5' id='about'>
           <nav className='sticky top-0 drop-shadow backdrop-blur-3xl px-5 z-50 lg:hidden'>
-            <h4 className='text-slate-300 font-bold mb-8 py-2 sm:mx-10'>ABOUT</h4>
+            <h4 className='text-center text-slate-300 font-bold mb-8 py-2 sm:mx-10'>ABOUT</h4>
           </nav>
-          <p className='text-slate-500 mb-20 lg:mb-0 sm:mx-10 lg:ml-0 px-5'>I possess a strong passion for both Website Development and Application Development, and I am currently seeking opportunities to gain valuable work experience in these fields. My background includes experience in website development and mobile application development, which has provided me with a solid foundation and a drive to excel further in these areas.
+          <p className='text-justify text-slate-500 mb-20 lg:mb-0 sm:mx-10 lg:ml-0 px-5'>I possess a strong passion for both Website Development and Application Development, and I am currently seeking opportunities to gain valuable work experience in these fields. My background includes experience in website development and mobile application development, which has provided me with a solid foundation and a drive to excel further in these areas.
             <br /> <br />
             However, I am not limiting myself solely to these domains. I am genuinely enthusiastic about exploring new and diverse aspects of Information Technology. I am eager to embrace learning opportunities and expand my skills in various IT fields. My curiosity and adaptability make me confident in taking on challenges beyond my current expertise.
             <br /> <br />
@@ -122,7 +122,7 @@ export default function Home() {
 
         <section className='lg:pt-20' id='experience'>
           <nav className='sticky top-0 drop-shadow backdrop-blur-3xl px-5 z-50 lg:hidden'>
-            <h4 className='text-slate-300 font-bold mb-8 py-2 sm:mx-10'>EXPERIENCE</h4>
+            <h4 className='text-center text-slate-300 font-bold mb-8 py-2 sm:mx-10'>EXPERIENCE</h4>
           </nav>
           <div className='mb-20 px-5 lg:mb-0 sm:mx-10 lg:ml-0'>
             <div className='mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
@@ -232,14 +232,14 @@ export default function Home() {
 
         <section className='lg:pt-20' id='project'>
           <nav className='sticky top-0 drop-shadow backdrop-blur-3xl px-5 z-10 lg:hidden'>
-            <h4 className='text-slate-300 font-bold mb-8 py-2 sm:mx-10'>PROJECT</h4>
+            <h4 className='text-center text-slate-300 font-bold mb-8 py-2 sm:mx-10'>PROJECT</h4>
           </nav>
           <div className='mb-20 px-5 sm:mx-10 lg:ml-0'>
             <div className='mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
               <div className='sm:order-last sm:ml-4'>
                 <a className='text-slate-300 mt-2 flex cursor-pointer hover:text-teal-400 lg:hover:text-slate-300' onClick={() => handleOpenModal(1)}>Hangul Syllable Predicition &nbsp; <span className='text-slate-500'>(Not Published)</span><RxArrowTopRight /></a>
                 <p className='text-slate-400 text-sm mb-2'>Thesis Project</p>
-                <p className='text-slate-500 text-sm mb-3'>Mobile application for handwriting classification of Korean language syllables. The model used in the application is trained using a machine learning algorithm, namely Convolutional Neural Network.</p>
+                <p className='text-justify text-slate-500 text-sm mb-3'>Mobile application for handwriting classification of Korean language syllables. The model used in the application is trained using a machine learning algorithm, namely Convolutional Neural Network.</p>
                 <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>Python</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>Flask</li>
@@ -255,7 +255,7 @@ export default function Home() {
               <div className='sm:order-last sm:ml-4'>
                 <a className='text-slate-300 mt-2 flex cursor-pointer hover:text-teal-400 lg:hover:text-slate-300' onClick={() => handleOpenModal(4)}>Central OCR &nbsp; <span className='text-slate-500'>(Not Published)</span><RxArrowTopRight /></a>
                 <p className='text-slate-400 text-sm mb-2'>Internship Project</p>
-                <p className='text-slate-500 text-sm mb-3'>A mobile application that uses the ocr feature to perform text extraction from various types of documents.</p>
+                <p className='text-justify text-slate-500 text-sm mb-3'>A mobile application that uses the ocr feature to perform text extraction from various types of documents.</p>
                 <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>React Native</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>JavaScript</li>
@@ -269,7 +269,7 @@ export default function Home() {
               <div className='sm:order-last sm:ml-4'>
                 <a className='text-slate-300 mt-2 flex cursor-pointer hover:text-teal-400 lg:hover:text-slate-300' href='https://sei-you.vercel.app/welcome' target='_blank'>SeiYou<RxArrowTopRight /></a>
                 <p className='text-slate-400 text-sm mb-2'>Group Project</p>
-                <p className='text-slate-500 text-sm mb-3'>Application for people that like voice acting. People can upload their voice acting and search other people&apos;s voice acting.</p>
+                <p className='text-justify text-slate-500 text-sm mb-3'>Application for people that like voice acting. People can upload their voice acting and search other people&apos;s voice acting.</p>
                 <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>Ionic React</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>JavaScript</li>
@@ -286,7 +286,7 @@ export default function Home() {
               <div className='sm:order-last sm:ml-4'>
                 <a className='text-slate-300 mt-2 flex cursor-pointer hover:text-teal-400 lg:hover:text-slate-300' onClick={() => handleOpenModal(2)}>Gebet App &nbsp;<span className='text-slate-500'>(Not Published)</span><RxArrowTopRight /></a>
                 <p className='text-slate-400 text-sm mb-2'>Course Project</p>
-                <p className='text-slate-500 text-sm mb-3'>Dating app-like application.</p>
+                <p className='text-justify text-slate-500 text-sm mb-3'>Dating app-like application.</p>
                 <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>Ionic React</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>JavaScript</li>
@@ -302,7 +302,7 @@ export default function Home() {
               <div className='sm:order-last sm:ml-4'>
                 <a className='text-slate-300 mt-2 flex cursor-pointer hover:text-teal-400 lg:hover:text-slate-300' href='https://play.google.com/store/apps/details?id=quick_recipe.didi_x_djongers' target='_blank'>Quick Recipe<RxArrowTopRight /></a>
                 <p className='text-slate-400 text-sm mb-2'>Group Project</p>
-                <p className='text-slate-500 text-sm mb-3'>Mobile application to find food recipe. People can also upload their recipe.</p>
+                <p className='text-justify text-slate-500 text-sm mb-3'>Mobile application to find food recipe. People can also upload their recipe.</p>
                 <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>Java</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>XML</li>
@@ -317,7 +317,7 @@ export default function Home() {
               <div className='sm:order-last sm:ml-4'>
                 <a className='text-slate-300 mt-2 flex cursor-pointer hover:text-teal-400 lg:hover:text-slate-300' onClick={() => handleOpenModal(3)}>SandwichYay &nbsp;<span className='text-slate-500'>(Not Published)</span><RxArrowTopRight /></a>
                 <p className='text-slate-400 text-sm mb-2'>Group Project</p>
-                <p className='text-slate-500 text-sm mb-3'>Website to make food order. Including admin dashboard section, where admins can restock and manage transactions.</p>
+                <p className='text-justify text-slate-500 text-sm mb-3'>Website to make food order. Including admin dashboard section, where admins can restock and manage transactions.</p>
                 <ul flex-wrap className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
                   {/* <li className='rounded-xl bg-cyan-950 px-2 py-1'>CodeIgniter4</li> */}
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>PHP</li>
@@ -335,7 +335,7 @@ export default function Home() {
               <div className='sm:order-last sm:ml-4'>
                 <a className='text-slate-300 mt-2 flex cursor-pointer hover:text-teal-400 lg:hover:text-slate-300' href='https://djong-weather.vercel.app/' target='_blank'>Djongers Weather <RxArrowTopRight /></a>
                 <p className='text-slate-400 text-sm mb-2'>Group Project</p>
-                <p className='text-slate-500 text-sm mb-3'>Website to check weather of all cities around the world.</p>
+                <p className='text-justify text-slate-500 text-sm mb-3'>Website to check weather of all cities around the world.</p>
                 <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>ReactJS</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>JavaScript</li>
@@ -350,36 +350,36 @@ export default function Home() {
           </div>
         </section>
 
-        <p className='text-slate-500 text-sm mb-6 px-5 lg:mb-0 sm:mx-10 lg:ml-5'>Coded in <span className='text-slate-400'>Visual Studio Code</span> by <span className='text-slate-400'>Felix Ferdinand</span>. Built with <span className='text-slate-400'>Next.js</span> and <span className='text-slate-400'>Tailwind CSS</span>, deployed with <span className='text-slate-400'>Vercel</span>. Last modified on December 4, 2023.</p>
+        <p className='text-slate-500 text-sm mb-6 px-5 lg:mb-0 sm:mx-10 lg:ml-5'>Coded in <span className='text-slate-400'>Visual Studio Code</span> by <span className='text-slate-400'>Felix Ferdinand</span>. Built with <span className='text-slate-400'>Next.js</span> and <span className='text-slate-400'>Tailwind CSS</span>, deployed with <span className='text-slate-400'>Vercel</span>. Last modified on December 8, 2023.</p>
 
         <Modal1 open={open1} onClose={() => setOpen1(false)}>
           <Carousel1>
-            {slides1.map((s) => (
-              <Image src={s} key={1} alt='carousel' className='rounded' />
+            {slides1.map((s, key) => (
+              <Image src={s} key={key} alt='carousel' className='rounded' />
             ))}
           </Carousel1>
         </Modal1>
 
         <Modal2 open={open2} onClose={() => setOpen2(false)}>
           <Carousel2>
-            {slides2.map((s) => (
-              <Image src={s} key={1} alt='carousel' className='rounded' />
+            {slides2.map((s, key) => (
+              <Image src={s} key={key} alt='carousel' className='rounded' />
             ))}
           </Carousel2>
         </Modal2>
 
         <Modal3 open={open3} onClose={() => setOpen3(false)}>
           <Carousel3>
-            {slides3.map((s) => (
-              <Image src={s} key={1} alt='carousel' className='rounded' />
+            {slides3.map((s, key) => (
+              <Image src={s} key={key} alt='carousel' className='rounded' />
             ))}
           </Carousel3>
         </Modal3>
 
         <Modal4 open={open4} onClose={() => setOpen4(false)}>
           <Carousel4>
-            {slides4.map((s) => (
-              <Image src={s} key={1} alt='carousel' className='rounded' />
+            {slides4.map((s, key) => (
+              <Image src={s} key={key} alt='carousel' className='rounded' />
             ))}
           </Carousel4>
         </Modal4>
