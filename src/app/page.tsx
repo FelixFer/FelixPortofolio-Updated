@@ -92,19 +92,19 @@ export default function Home() {
         </div>
         <div className='justify-center lg:justify-start flex flex-row gap-3 text-3xl text-slate-400 mt-5 mb-20 lg:mt-auto'>
           <a href="mailto:felixfdnd@gmail.com">
-            <BiLogoGmail className='cursor-pointer hover:text-slate-50' />
+            <BiLogoGmail className='cursor-pointer transition-all hover:text-slate-50 hover:animate-pulse' />
           </a>
           <a href="https://www.linkedin.com/in/felix-ferdinand-46392a1b7/" target='_blank'>
-            <AiFillLinkedin className='cursor-pointer hover:text-slate-50' />
+            <AiFillLinkedin className='cursor-pointer transition-all hover:text-slate-50 hover:animate-pulse' />
           </a>
           <a href="https://wa.me/082371176527" target='_blank'>
-            <AiOutlineWhatsApp className='cursor-pointer hover:text-slate-50' />
+            <AiOutlineWhatsApp className='cursor-pointer transition-all hover:text-slate-50 hover:animate-pulse' />
           </a>
           <a href="https://github.com/FelixFer" target='_blank'>
-            <AiFillGithub className='cursor-pointer hover:text-slate-50' />
+            <AiFillGithub className='cursor-pointer transition-all hover:text-slate-50 hover:animate-pulse' />
           </a>
           <a href="https://www.instagram.com/felferdinand/" target='_blank'>
-            <AiOutlineInstagram className='cursor-pointer hover:text-slate-50' />
+            <AiOutlineInstagram className='cursor-pointer transition-all hover:text-slate-50 hover:animate-pulse' />
           </a>
         </div>
       </aside>
@@ -125,7 +125,7 @@ export default function Home() {
             <h4 className='text-center text-slate-300 font-bold mb-8 py-2 sm:mx-10'>EXPERIENCE</h4>
           </nav>
           <div className='mb-20 px-5 lg:mb-0 sm:mx-10 lg:ml-0'>
-            <div className='mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
+            <div className='transition-all mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
               <p className='text-slate-500 text-sm'>Sep 2023 — Present</p>
               <div className='sm:ml-4'>
                 <p className='text-slate-300 mt-2 sm:mt-0 hover:text-teal-400 lg:hover:text-slate-300'>Backend Developer · PT Ganda Visi Jayatama</p>
@@ -146,7 +146,7 @@ export default function Home() {
                 </ul>
               </div>
             </div>
-            <div className='mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
+            <div className='transition-all mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
               <p className='text-slate-500 text-sm'>Feb 2023 — June 2023</p>
               <div className='sm:ml-4'>
                 <p className='text-slate-300 mt-2 sm:mt-0 hover:text-teal-400 lg:hover:text-slate-300'>Lab Assistant · Lab FTI Universitas Multimedia Nusantara</p>
@@ -164,7 +164,7 @@ export default function Home() {
                 </ul>
               </div>
             </div>
-            <div className='mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
+            <div className='transition-all mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
               <p className='text-slate-500 text-sm'>Aug 2022 — Dec 2022</p>
               <div className='sm:ml-4'>
                 <p className='text-slate-300 mt-2 sm:mt-0 hover:text-teal-400 lg:hover:text-slate-300'>Mobile Developer · PT Central Artificial Intelligence</p>
@@ -179,7 +179,7 @@ export default function Home() {
                 </ul>
               </div>
             </div>
-            <div className='mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
+            <div className='transition-all mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
               <p className='text-slate-500 text-sm'>Nov 2021 — Apr 2022</p>
               <div className='sm:ml-4'>
                 <p className='text-slate-300 mt-2 sm:mt-0 hover:text-teal-400 lg:hover:text-slate-300'>Website Developer · TVONAIR 7.0</p>
@@ -192,7 +192,7 @@ export default function Home() {
                 </ul>
               </div>
             </div>
-            <div className='mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
+            <div className='transition-all mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
               <p className='text-slate-500 text-sm'>Mar 2021 — Mar 2022</p>
               <div className='sm:ml-4'>
                 <p className='text-slate-300 mt-2 sm:mt-0 hover:text-teal-400 lg:hover:text-slate-300'>IT & Web Department · UMN TV Gen 7</p>
@@ -205,7 +205,7 @@ export default function Home() {
                 </ul>
               </div>
             </div>
-            <div className='mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
+            <div className='transition-all mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
               <p className='text-slate-500 text-sm'>May 2021 — Dec 2021</p>
               <div className='sm:ml-4'>
                 <p className='text-slate-300 mt-2 sm:my-0 hover:text-teal-400 lg:hover:text-slate-300'>Website Developer · UMN Festival 2021</p>
@@ -234,8 +234,8 @@ export default function Home() {
           <nav className='sticky top-0 drop-shadow backdrop-blur-3xl px-5 z-10 lg:hidden'>
             <h4 className='text-center text-slate-300 font-bold mb-8 py-2 sm:mx-10'>PROJECT</h4>
           </nav>
-          <div className='mb-20 px-5 sm:mx-10 lg:ml-0'>
-            <div className='mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
+          <div className='text-center sm:text-left mb-20 px-5 sm:mx-10 lg:ml-0'>
+            <div className='transition-all mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
               <div className='sm:order-last sm:ml-4'>
                 <a className='text-slate-300 mt-2 flex cursor-pointer hover:text-teal-400 lg:hover:text-slate-300' onClick={() => handleOpenModal(1)}>Hangul Syllable Predicition &nbsp; <span className='text-slate-500'>(Not Published)</span><RxArrowTopRight /></a>
                 <p className='text-slate-400 text-sm mb-2'>Thesis Project</p>
@@ -251,7 +251,7 @@ export default function Home() {
                 <Image src={hangulClassification} alt='Hangul Syllables Classification App' objectFit='cover' />
               </div>
             </div>
-            <div className='mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
+            <div className='transition-all mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
               <div className='sm:order-last sm:ml-4'>
                 <a className='text-slate-300 mt-2 flex cursor-pointer hover:text-teal-400 lg:hover:text-slate-300' onClick={() => handleOpenModal(4)}>Central OCR &nbsp; <span className='text-slate-500'>(Not Published)</span><RxArrowTopRight /></a>
                 <p className='text-slate-400 text-sm mb-2'>Internship Project</p>
@@ -265,7 +265,7 @@ export default function Home() {
                 <Image src={ocr} alt='Hangul Syllables Classification App' objectFit='cover' />
               </div>
             </div>
-            <div className='mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
+            <div className='transition-all mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
               <div className='sm:order-last sm:ml-4'>
                 <a className='text-slate-300 mt-2 flex cursor-pointer hover:text-teal-400 lg:hover:text-slate-300' href='https://sei-you.vercel.app/welcome' target='_blank'>SeiYou<RxArrowTopRight /></a>
                 <p className='text-slate-400 text-sm mb-2'>Group Project</p>
@@ -282,7 +282,7 @@ export default function Home() {
                 <Image src={seiyou} alt='SeiYou App' objectFit='cover' />
               </div>
             </div>
-            <div className='mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
+            <div className='transition-all mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
               <div className='sm:order-last sm:ml-4'>
                 <a className='text-slate-300 mt-2 flex cursor-pointer hover:text-teal-400 lg:hover:text-slate-300' onClick={() => handleOpenModal(2)}>Gebet App &nbsp;<span className='text-slate-500'>(Not Published)</span><RxArrowTopRight /></a>
                 <p className='text-slate-400 text-sm mb-2'>Course Project</p>
@@ -298,7 +298,7 @@ export default function Home() {
                 <Image src={gebetApp} alt='SeiYou App' objectFit='cover' />
               </div>
             </div>
-            <div className='mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
+            <div className='transition-all mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
               <div className='sm:order-last sm:ml-4'>
                 <a className='text-slate-300 mt-2 flex cursor-pointer hover:text-teal-400 lg:hover:text-slate-300' href='https://play.google.com/store/apps/details?id=quick_recipe.didi_x_djongers' target='_blank'>Quick Recipe<RxArrowTopRight /></a>
                 <p className='text-slate-400 text-sm mb-2'>Group Project</p>
@@ -313,7 +313,7 @@ export default function Home() {
                 <Image src={quicRecipe} alt='Hangul Syllables Classification App' objectFit='cover' />
               </div>
             </div>
-            <div className='mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
+            <div className='transition-all mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
               <div className='sm:order-last sm:ml-4'>
                 <a className='text-slate-300 mt-2 flex cursor-pointer hover:text-teal-400 lg:hover:text-slate-300' onClick={() => handleOpenModal(3)}>SandwichYay &nbsp;<span className='text-slate-500'>(Not Published)</span><RxArrowTopRight /></a>
                 <p className='text-slate-400 text-sm mb-2'>Group Project</p>
@@ -331,7 +331,7 @@ export default function Home() {
                 <Image src={sandYay1} alt='Hangul Syllables Classification App' objectFit='cover' />
               </div>
             </div>
-            <div className='mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
+            <div className='transition-all mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
               <div className='sm:order-last sm:ml-4'>
                 <a className='text-slate-300 mt-2 flex cursor-pointer hover:text-teal-400 lg:hover:text-slate-300' href='https://djong-weather.vercel.app/' target='_blank'>Djongers Weather <RxArrowTopRight /></a>
                 <p className='text-slate-400 text-sm mb-2'>Group Project</p>
