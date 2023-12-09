@@ -1,8 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image'
-import { AiOutlineInstagram, AiFillLinkedin, AiFillGithub, AiOutlineWhatsApp } from 'react-icons/ai'
-import { BiLogoGmail } from 'react-icons/bi'
 import { RxArrowTopRight } from 'react-icons/rx'
 import hangulClassification from '../../public/img/hangul-prediction.png'
 import djongWeather from '../../public/img/djong-weather.png'
@@ -37,6 +35,9 @@ import Modal3 from './components/modal3';
 import Carousel3 from './components/carousel3';
 import Modal4 from './components/modal4';
 import Carousel4 from './components/carousel4';
+import SocialIcons from './components/socialIcons';
+import Description from './components/Description';
+import Footer from './components/Footer';
 
 const slides1 = [hangul1, hangul2, hangul3]
 const slides2 = [gebetApp1, gebetApp2, gebetApp3, gebetApp4]
@@ -77,47 +78,25 @@ export default function Home() {
   return (
     <div className='lg:min-h-screen lg:grid lg:grid-cols-[45%_55%] bg-gradient-to-br from-indigo-950 to-slate-950 py-5 lg:p-0'>
       <aside className='sm:mx-10 lg:h-screen lg:sticky lg:top-0 lg:pt-20 lg:px-20 lg:flex lg:flex-col px-5'>
-        <div>
-          <h1 className='text-center lg:text-left text-slate-200 text-3xl sm:text-4xl lg:text-5xl my-6 lg:mt-0 font-bold'>Felix Ferdinand</h1>
-          <h2 className='text-center lg:text-left text-slate-300 sm:text-xl lg:text-2xl xl:text-3xl'>Backend Developer</h2>
-          <h3 className='text-center lg:text-left text-slate-400 sm:text-sm lg:text-lg xl:text-xl'>Graduate of Informatics Engineering from Universitas Multimedia Nusantara</h3>
-          {/* <i className='text-slate-600 mb-20 lg:mb-0 sm:mx-10 lg:mx-0'>&quot;Once you start and its hard to stop, thats what you call addiction.&quot;</i> */}
-          <div className='mt-20 hidden lg:block'>
-            <ul className='text-slate-500 font-bold'>
-              <li className={`my-4 hover:text-slate-300 hover:tracking-widest cursor-pointer transition-all ${activeLink === 'about' ? 'text-slate-300 tracking-widest' : ''}`}><a href="#about">About</a></li>
-              <li className={`my-4 hover:text-slate-300 hover:tracking-widest cursor-pointer transition-all ${activeLink === 'experience' ? 'text-slate-300 tracking-widest' : ''}`}><a href="#experience">Experience</a></li>
-              <li className={`my-4 hover:text-slate-300 hover:tracking-widest cursor-pointer transition-all ${activeLink === 'project' ? 'text-slate-300 tracking-widest' : ''}`}><a href="#project">Project</a></li>
-            </ul>
-          </div>
+        <h1 className='text-center lg:text-left text-slate-200 text-3xl sm:text-4xl lg:text-5xl my-6 lg:mt-0 font-bold'>Felix Ferdinand</h1>
+        <h2 className='text-center lg:text-left text-slate-300 sm:text-xl lg:text-xl xl:text-2xl'>Backend Developer</h2>
+        <h3 className='text-center lg:text-left text-slate-400 sm:text-sm lg:text-md xl:text-lg'>Graduate of Informatics Engineering from Universitas Multimedia Nusantara</h3>
+        {/* <i className='text-slate-600 mb-20 lg:mb-0 sm:mx-10 lg:mx-0'>&quot;Once you start and its hard to stop, thats what you call addiction.&quot;</i> */}
+        <div className='my-auto hidden lg:block'>
+          <ul className='text-slate-500 font-bold'>
+            <li className={`my-4 hover:text-slate-300 hover:tracking-widest cursor-pointer transition-all ${activeLink === 'about' ? 'text-slate-300 tracking-widest' : ''}`}><a href="#about">About</a></li>
+            <li className={`my-4 hover:text-slate-300 hover:tracking-widest cursor-pointer transition-all ${activeLink === 'experience' ? 'text-slate-300 tracking-widest' : ''}`}><a href="#experience">Experience</a></li>
+            <li className={`my-4 hover:text-slate-300 hover:tracking-widest cursor-pointer transition-all ${activeLink === 'project' ? 'text-slate-300 tracking-widest' : ''}`}><a href="#project">Project</a></li>
+          </ul>
         </div>
-        <div className='justify-center lg:justify-start flex flex-row gap-3 text-3xl text-slate-400 mt-5 mb-20 lg:mt-auto'>
-          <a href="mailto:felixfdnd@gmail.com">
-            <BiLogoGmail className='cursor-pointer transition-all hover:text-slate-50 hover:animate-pulse' />
-          </a>
-          <a href="https://www.linkedin.com/in/felix-ferdinand-46392a1b7/" target='_blank'>
-            <AiFillLinkedin className='cursor-pointer transition-all hover:text-slate-50 hover:animate-pulse' />
-          </a>
-          <a href="https://wa.me/082371176527" target='_blank'>
-            <AiOutlineWhatsApp className='cursor-pointer transition-all hover:text-slate-50 hover:animate-pulse' />
-          </a>
-          <a href="https://github.com/FelixFer" target='_blank'>
-            <AiFillGithub className='cursor-pointer transition-all hover:text-slate-50 hover:animate-pulse' />
-          </a>
-          <a href="https://www.instagram.com/felferdinand/" target='_blank'>
-            <AiOutlineInstagram className='cursor-pointer transition-all hover:text-slate-50 hover:animate-pulse' />
-          </a>
-        </div>
+        <SocialIcons />
       </aside>
       <main className='lg:pb-20 lg:pr-20'>
         <section className='lg:pt-20 lg:mx-5' id='about'>
           <nav className='sticky top-0 drop-shadow backdrop-blur-3xl px-5 z-50 lg:hidden'>
             <h4 className='text-center text-slate-300 font-bold mb-8 py-2 sm:mx-10'>ABOUT</h4>
           </nav>
-          <p className='text-justify text-slate-500 mb-20 lg:mb-0 sm:mx-10 lg:ml-0 px-5'>I possess a strong passion for both Website Development and Application Development, and I am currently seeking opportunities to gain valuable work experience in these fields. My background includes experience in website development and mobile application development, which has provided me with a solid foundation and a drive to excel further in these areas.
-            <br /> <br />
-            However, I am not limiting myself solely to these domains. I am genuinely enthusiastic about exploring new and diverse aspects of Information Technology. I am eager to embrace learning opportunities and expand my skills in various IT fields. My curiosity and adaptability make me confident in taking on challenges beyond my current expertise.
-            <br /> <br />
-            I am committed to contributing my best efforts and leveraging my existing knowledge to make a meaningful impact in the projects I am involved in. I am excited to collaborate with passionate teams and contribute to innovative solutions that positively impact the world.</p>
+          <Description />
         </section>
 
         <section className='lg:pt-20' id='experience'>
@@ -234,7 +213,7 @@ export default function Home() {
           <nav className='sticky top-0 drop-shadow backdrop-blur-3xl px-5 z-10 lg:hidden'>
             <h4 className='text-center text-slate-300 font-bold mb-8 py-2 sm:mx-10'>PROJECT</h4>
           </nav>
-          <div className='text-center sm:text-left mb-20 px-5 sm:mx-10 lg:ml-0'>
+          <div className='mb-20 px-5 sm:mx-10 lg:ml-0'>
             <div className='transition-all mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
               <div className='sm:order-last sm:ml-4'>
                 <a className='text-slate-300 mt-2 flex cursor-pointer hover:text-teal-400 lg:hover:text-slate-300' onClick={() => handleOpenModal(1)}>Hangul Syllable Predicition &nbsp; <span className='text-slate-500'>(Not Published)</span><RxArrowTopRight /></a>
@@ -350,7 +329,7 @@ export default function Home() {
           </div>
         </section>
 
-        <p className='text-slate-500 text-sm mb-6 px-5 lg:mb-0 sm:mx-10 lg:ml-5'>Coded in <span className='text-slate-400'>Visual Studio Code</span> by <span className='text-slate-400'>Felix Ferdinand</span>. Built with <span className='text-slate-400'>Next.js</span> and <span className='text-slate-400'>Tailwind CSS</span>, deployed with <span className='text-slate-400'>Vercel</span>. Last modified on December 8, 2023.</p>
+        <Footer />
 
         <Modal1 open={open1} onClose={() => setOpen1(false)}>
           <Carousel1>
