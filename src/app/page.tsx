@@ -35,7 +35,7 @@ import Modal3 from './components/modal3';
 import Carousel3 from './components/carousel3';
 import Modal4 from './components/modal4';
 import Carousel4 from './components/carousel4';
-import SocialIcons from './components/socialIcons';
+import SocialIcons from './components/SocialIcons';
 import Description from './components/Description';
 import Footer from './components/Footer';
 
