@@ -35,9 +35,12 @@ import Modal3 from './components/modal3';
 import Carousel3 from './components/carousel3';
 import Modal4 from './components/modal4';
 import Carousel4 from './components/carousel4';
-import SocialIcons from './components/socialIcons';
+import SocialIcons from './components/SocialIcons';
 import Description from './components/Description';
 import Footer from './components/Footer';
+import axios from 'axios';
+import { IPokemon } from './interface/IPokemon';
+import Pokedex from './components/Pokedex';
 
 const slides1 = [hangul1, hangul2, hangul3]
 const slides2 = [gebetApp1, gebetApp2, gebetApp3, gebetApp4]
@@ -50,6 +53,28 @@ export default function Home() {
   const [open2, setOpen2] = useState(false);
   const [open3, setOpen3] = useState(false);
   const [open4, setOpen4] = useState(false);
+  const [openPokedex, setOpenPokedex] = useState(false);
+  const [pokemon, setPokemon] = useState<IPokemon[]>();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data: IPokemon[] = [];
+        for (let i = 1; i < 152; i++) {
+          const response = await axios.get(
+            `https://pokeapi.co/api/v2/pokemon/${i}/`
+          );
+          const { id, abilities, name, types, sprites, stats } = response.data;
+          const pokemonInfo: IPokemon = { id, abilities, name, types, sprites, stats };
+          data.push(pokemonInfo);
+        }
+        setPokemon(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+  }, []);
 
   const handleOpenModal = (modalType: number) => {
     if (modalType === 1) setOpen1(true);
@@ -78,7 +103,7 @@ export default function Home() {
   return (
     <div className='lg:min-h-screen lg:grid lg:grid-cols-[45%_55%] bg-gradient-to-br from-indigo-950 to-slate-950 py-5 lg:p-0'>
       <aside className='sm:mx-10 lg:h-screen lg:sticky lg:top-0 lg:pt-20 lg:px-20 lg:flex lg:flex-col px-5'>
-        <h1 className='text-center lg:text-left text-slate-200 text-3xl sm:text-4xl lg:text-5xl my-6 lg:mt-0 font-bold'>Felix Ferdinand</h1>
+        <h1 className="text-center lg:text-left text-slate-200 text-3xl sm:text-4xl lg:text-5xl my-6 lg:mt-0 font-bold cursor-pointer lg:after:block lg:after:content-[''] lg:after:absolute lg:after:h-[5px] lg:after:bg-slate-200 lg:after:w-52 lg:after:scale-x-0 lg:after:hover:scale-x-100 after:transition after:duration-300 lg:after:origin-left" onClick={() => setOpenPokedex(true)}>Felix Ferdinand</h1>
         <h2 className='text-center lg:text-left text-slate-300 sm:text-xl lg:text-xl xl:text-2xl'>Backend Developer</h2>
         <h3 className='text-center lg:text-left text-slate-400 sm:text-sm lg:text-md xl:text-lg'>Graduate of Informatics Engineering from Universitas Multimedia Nusantara</h3>
         {/* <i className='text-slate-600 mb-20 lg:mb-0 sm:mx-10 lg:mx-0'>&quot;Once you start and its hard to stop, thats what you call addiction.&quot;</i> */}
@@ -227,7 +252,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className='bg-emerald-900 relative overflow-hidden rounded-lg w-80 sm:w-40 sm:h-28 lg:w-28 lg:h-16 xl:w-44 xl:h-28 mt-4 border-2 border-slate-600 hover:border-slate-500 sm:order-first'>
-                <Image src={hangulClassification} alt='Hangul Syllables Classification App' objectFit='cover' />
+                <Image src={hangulClassification} alt='Hangul Syllables Classification App' style={{ objectFit: 'cover' }} />
               </div>
             </div>
             <div className='transition-all mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
@@ -241,7 +266,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className='bg-emerald-900 relative overflow-hidden rounded-lg w-80 sm:w-40 sm:h-28 lg:w-28 lg:h-16 xl:w-44 xl:h-28 mt-4 border-2 border-slate-600 hover:border-slate-500 sm:order-first'>
-                <Image src={ocr} alt='Hangul Syllables Classification App' objectFit='cover' />
+                <Image src={ocr} alt='Hangul Syllables Classification App' style={{ objectFit: 'cover' }} />
               </div>
             </div>
             <div className='transition-all mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
@@ -258,7 +283,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className='bg-emerald-900 relative overflow-hidden rounded-lg w-80 sm:w-40 sm:h-28 lg:w-28 lg:h-16 xl:w-44 xl:h-28 mt-4 border-2 border-slate-600 hover:border-slate-500'>
-                <Image src={seiyou} alt='SeiYou App' objectFit='cover' />
+                <Image src={seiyou} alt='SeiYou App' style={{ objectFit: 'cover' }} />
               </div>
             </div>
             <div className='transition-all mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
@@ -274,7 +299,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className='bg-emerald-900 relative overflow-hidden rounded-lg w-80 sm:w-40 sm:h-28 lg:w-28 lg:h-16 xl:w-44 xl:h-28 mt-4 border-2 border-slate-600 hover:border-slate-500'>
-                <Image src={gebetApp} alt='SeiYou App' objectFit='cover' />
+                <Image src={gebetApp} alt='SeiYou App' style={{ objectFit: 'cover' }} />
               </div>
             </div>
             <div className='transition-all mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
@@ -289,7 +314,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className='bg-emerald-900 relative overflow-hidden rounded-lg w-80 sm:w-40 sm:h-28 lg:w-28 lg:h-16 xl:w-44 xl:h-28 mt-4 border-2 border-slate-600 hover:border-slate-500'>
-                <Image src={quicRecipe} alt='Hangul Syllables Classification App' objectFit='cover' />
+                <Image src={quicRecipe} alt='Hangul Syllables Classification App' style={{ objectFit: 'cover' }} />
               </div>
             </div>
             <div className='transition-all mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
@@ -307,7 +332,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className='bg-emerald-900 relative overflow-hidden rounded-lg w-80 sm:w-40 sm:h-20 lg:w-28 lg:h-14 xl:w-44 xl:h-20 mt-4 border-2 border-slate-600 hover:border-slate-500'>
-                <Image src={sandYay1} alt='Hangul Syllables Classification App' objectFit='cover' />
+                <Image src={sandYay1} alt='Hangul Syllables Classification App' style={{ objectFit: 'cover' }} />
               </div>
             </div>
             <div className='transition-all mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
@@ -323,7 +348,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className='bg-emerald-900 relative overflow-hidden rounded-lg w-80 sm:w-40 sm:h-20 lg:w-28 lg:h-14 xl:w-44 xl:h-20 mt-4 border-2 border-slate-600 hover:border-slate-500'>
-                <Image src={djongWeather} alt='Hangul Syllables Classification App' objectFit='cover' />
+                <Image src={djongWeather} alt='Hangul Syllables Classification App' style={{ objectFit: 'cover' }} />
               </div>
             </div>
           </div>
@@ -362,6 +387,7 @@ export default function Home() {
             ))}
           </Carousel4>
         </Modal4>
+        <Pokedex open={openPokedex} onClose={() => setOpenPokedex(false)} pokemonData={pokemon} />
       </main>
     </div>
   )
