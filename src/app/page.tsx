@@ -252,7 +252,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className='bg-emerald-900 relative overflow-hidden rounded-lg w-80 sm:w-40 sm:h-28 lg:w-28 lg:h-16 xl:w-44 xl:h-28 mt-4 border-2 border-slate-600 hover:border-slate-500 sm:order-first'>
-                <Image src={hangulClassification} alt='Hangul Syllables Classification App' style={{ objectFit: 'cover' }} />
+                <Image loading='lazy' src={hangulClassification} alt='Hangul Syllables Classification App' style={{ objectFit: 'cover' }} />
               </div>
             </div>
             <div className='transition-all mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
@@ -266,7 +266,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className='bg-emerald-900 relative overflow-hidden rounded-lg w-80 sm:w-40 sm:h-28 lg:w-28 lg:h-16 xl:w-44 xl:h-28 mt-4 border-2 border-slate-600 hover:border-slate-500 sm:order-first'>
-                <Image src={ocr} alt='Hangul Syllables Classification App' style={{ objectFit: 'cover' }} />
+                <Image loading='lazy' src={ocr} alt='Hangul Syllables Classification App' style={{ objectFit: 'cover' }} />
               </div>
             </div>
             <div className='transition-all mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
@@ -283,7 +283,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className='bg-emerald-900 relative overflow-hidden rounded-lg w-80 sm:w-40 sm:h-28 lg:w-28 lg:h-16 xl:w-44 xl:h-28 mt-4 border-2 border-slate-600 hover:border-slate-500'>
-                <Image src={seiyou} alt='SeiYou App' style={{ objectFit: 'cover' }} />
+                <Image loading='lazy' src={seiyou} alt='SeiYou App' style={{ objectFit: 'cover' }} />
               </div>
             </div>
             <div className='transition-all mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
@@ -299,7 +299,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className='bg-emerald-900 relative overflow-hidden rounded-lg w-80 sm:w-40 sm:h-28 lg:w-28 lg:h-16 xl:w-44 xl:h-28 mt-4 border-2 border-slate-600 hover:border-slate-500'>
-                <Image src={gebetApp} alt='SeiYou App' style={{ objectFit: 'cover' }} />
+                <Image loading='lazy' src={gebetApp} alt='SeiYou App' style={{ objectFit: 'cover' }} />
               </div>
             </div>
             <div className='transition-all mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
@@ -314,7 +314,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className='bg-emerald-900 relative overflow-hidden rounded-lg w-80 sm:w-40 sm:h-28 lg:w-28 lg:h-16 xl:w-44 xl:h-28 mt-4 border-2 border-slate-600 hover:border-slate-500'>
-                <Image src={quicRecipe} alt='Hangul Syllables Classification App' style={{ objectFit: 'cover' }} />
+                <Image loading='lazy' src={quicRecipe} alt='Hangul Syllables Classification App' style={{ objectFit: 'cover' }} />
               </div>
             </div>
             <div className='transition-all mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
@@ -332,7 +332,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className='bg-emerald-900 relative overflow-hidden rounded-lg w-80 sm:w-40 sm:h-20 lg:w-28 lg:h-14 xl:w-44 xl:h-20 mt-4 border-2 border-slate-600 hover:border-slate-500'>
-                <Image src={sandYay1} alt='Hangul Syllables Classification App' style={{ objectFit: 'cover' }} />
+                <Image loading='lazy' src={sandYay1} alt='Hangul Syllables Classification App' style={{ objectFit: 'cover' }} />
               </div>
             </div>
             <div className='transition-all mb-10 sm:grid sm:grid-cols-[30%_70%] lg:p-5 lg:border lg:border-transparent lg:hover:bg-indigo-950 lg:hover:rounded-md'>
@@ -348,7 +348,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className='bg-emerald-900 relative overflow-hidden rounded-lg w-80 sm:w-40 sm:h-20 lg:w-28 lg:h-14 xl:w-44 xl:h-20 mt-4 border-2 border-slate-600 hover:border-slate-500'>
-                <Image src={djongWeather} alt='Hangul Syllables Classification App' style={{ objectFit: 'cover' }} />
+                <Image loading='lazy' src={djongWeather} alt='Hangul Syllables Classification App' style={{ objectFit: 'cover' }} />
               </div>
             </div>
           </div>
@@ -359,7 +359,7 @@ export default function Home() {
         <Modal1 open={open1} onClose={() => setOpen1(false)}>
           <Carousel1>
             {slides1.map((s, key) => (
-              <Image src={s} key={key} alt='carousel' className='rounded' />
+              <Image loading='lazy' src={s} key={key} alt='carousel' className='rounded' />
             ))}
           </Carousel1>
         </Modal1>
@@ -367,7 +367,7 @@ export default function Home() {
         <Modal2 open={open2} onClose={() => setOpen2(false)}>
           <Carousel2>
             {slides2.map((s, key) => (
-              <Image src={s} key={key} alt='carousel' className='rounded' />
+              <Image loading='lazy' src={s} key={key} alt='carousel' className='rounded' />
             ))}
           </Carousel2>
         </Modal2>
@@ -375,7 +375,7 @@ export default function Home() {
         <Modal3 open={open3} onClose={() => setOpen3(false)}>
           <Carousel3>
             {slides3.map((s, key) => (
-              <Image src={s} key={key} alt='carousel' className='rounded' />
+              <Image loading='lazy' src={s} key={key} alt='carousel' className='rounded' />
             ))}
           </Carousel3>
         </Modal3>

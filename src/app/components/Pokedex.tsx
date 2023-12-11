@@ -18,7 +18,7 @@ const Pokedex = ({ open, onClose, pokemonData }: { open: boolean, onClose: any, 
                     active:border-b-[0px]
                     transition-all duration-150 [box-shadow:0_6px_0_0_#64599e,0_12px_0_0_#1b70f841]
                     border-b-[1px]' style={{ backgroundColor: secondary[(pokemon.types[0].type.name as keyof typeof secondary)] }}>
-                        <Image src={pokemon && pokemon.sprites!.other['official-artwork']?.front_default} alt='pokemon' className='rounded-full mr-3' style={{ backgroundColor: tertiary[(pokemon.types[0].type.name as keyof typeof tertiary)] }} width={100} height={100} />
+                        <Image src={pokemon && pokemon.sprites!.other['official-artwork']?.front_default} alt='pokemon' className='rounded-full mr-3' style={{ backgroundColor: tertiary[(pokemon.types[0].type.name as keyof typeof tertiary)] }} loading='lazy' width={100} height={100} />
                         <div>
                             <h1 className='text-slate-50'>{pokemon ? capitalizeFirstLetter(pokemon.name) : 'loading'}</h1>
                             <div className='flex text-slate-50 gap-1 text-xs'>
