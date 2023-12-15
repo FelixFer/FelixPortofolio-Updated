@@ -17,7 +17,7 @@ const Pokedex = ({ open, onClose, pokemonData }: { open: boolean, onClose: any, 
                     <div key={pokemon.id} className='my-5 rounded-xl items-center flex p-2 shadow-lg active:translate-y-2 cursor-pointer active:[box-shadow:0_0px_0_0_#64599e,0_0px_0_0_#7482ce] active:border-b-[0px] transition-all duration-150 [box-shadow:0_6px_0_0_#64599e,0_12px_0_0_#7482ce] border-b-[1px] select-none' style={{ backgroundColor: secondary[(pokemon.types[0].type.name as keyof typeof secondary)] }}>
                         <Image src={pokemon && pokemon.sprites!.other['official-artwork']?.front_default} alt='pokemon' className='rounded-full mr-3' style={{ backgroundColor: tertiary[(pokemon.types[0].type.name as keyof typeof tertiary)] }} loading='lazy' width={100} height={100} />
                         <div>
-                            <h1 className='text-slate-50'>{capitalizeFirstLetter(pokemon.name)}</h1>
+                            <h1 className='text-slate-50'>{'#' + pokemon.id + ' ' + capitalizeFirstLetter(pokemon.name)}</h1>
                             <div className='flex text-slate-50 gap-1 text-xs'>
                                 <p className='rounded-md px-3 py-1 border-2' style={{ backgroundColor: primary[(pokemon.types[0].type.name as keyof typeof primary)] }}>
                                     {pokemon.types[0].type.name}
