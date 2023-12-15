@@ -139,7 +139,7 @@ export default function Home() {
                 <p className='text-slate-500 text-sm'>• Design database schema using dbdiagram.</p>
                 <p className='text-slate-500 text-sm'>• Migration and seeding database using Sequelize and PostgreSQL.</p>
                 <p className='text-slate-500 text-sm mb-3'>• Collaborating on version control code using git.</p>
-                <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
+                <ul className='text-teal-400 text-xs flex gap-1 font-bold text-[10px]' style={{ flexWrap: 'wrap' }}>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>Express.js</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>Sequelize</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>Typescript</li>
@@ -158,7 +158,7 @@ export default function Home() {
                 <p className='text-slate-500 text-sm'>Teaching Introduction to Internet Technology course:</p>
                 <p className='text-slate-500 text-sm'>• Create basic website.</p>
                 <p className='text-slate-500 text-sm mb-3'>• Create website using CSS and JavaScript framework.</p>
-                <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
+                <ul className='text-teal-400 text-xs flex gap-1 font-bold text-[10px]' style={{ flexWrap: 'wrap' }}>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>HTML</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>CSS</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>JavaScript</li>
@@ -176,7 +176,7 @@ export default function Home() {
                 <p className='text-slate-500 text-sm'>• Create a mobile application using React Native as the Frontend based on the design given in Figma.</p>
                 <p className='text-slate-500 text-sm'>• Maintaining and update Central OCR mobile application.</p>
                 <p className='text-slate-500 text-sm mb-3'>• Collaborating on version control code using git.</p>
-                <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
+                <ul className='text-teal-400 text-xs flex gap-1 font-bold text-[10px]' style={{ flexWrap: 'wrap' }}>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>React Native</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>JavaScript</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>Git</li>
@@ -189,7 +189,7 @@ export default function Home() {
                 <p className='text-slate-300 mt-2 sm:mt-0 hover:text-teal-400 lg:hover:text-slate-300'>Website Developer · TVONAIR 7.0</p>
                 <p className='text-slate-400 text-sm mb-2'>Committee</p>
                 <p className='text-slate-500 text-sm mb-3'>Design, create, develop, and maintain TV On Air website.</p>
-                <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
+                <ul className='text-teal-400 text-xs flex gap-1 font-bold text-[10px]' style={{ flexWrap: 'wrap' }}>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>HTML</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>CSS</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>JavaScript</li>
@@ -202,7 +202,7 @@ export default function Home() {
                 <p className='text-slate-300 mt-2 sm:mt-0 hover:text-teal-400 lg:hover:text-slate-300'>IT & Web Department · UMN TV Gen 7</p>
                 <p className='text-slate-400 text-sm mb-2'>Organization</p>
                 <p className='text-slate-500 text-sm mb-3'>Design, create, develop, and maintain UMN TV website.</p>
-                <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
+                <ul className='text-teal-400 text-xs flex gap-1 font-bold text-[10px]' style={{ flexWrap: 'wrap' }}>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>HTML</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>CSS</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>JavaScript</li>
@@ -215,7 +215,7 @@ export default function Home() {
                 <p className='text-slate-300 mt-2 sm:my-0 hover:text-teal-400 lg:hover:text-slate-300'>Website Developer · UMN Festival 2021</p>
                 <p className='text-slate-400 text-sm mb-2'>Committee</p>
                 <p className='text-slate-500 text-sm mb-3'>Integrating and maintain UMN Festival website.</p>
-                <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
+                <ul className='text-teal-400 text-xs flex gap-1 font-bold text-[10px]' style={{ flexWrap: 'wrap' }}>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>HTML</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>CSS</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>JavaScript</li>
@@ -244,7 +244,7 @@ export default function Home() {
                 <a className='text-slate-300 mt-2 flex cursor-pointer hover:text-teal-400 lg:hover:text-slate-300' onClick={() => handleOpenModal(1)}>Hangul Syllable Predicition &nbsp; <span className='text-slate-500'>(Not Published)</span><RxArrowTopRight /></a>
                 <p className='text-slate-400 text-sm mb-2'>Thesis Project</p>
                 <p className='text-justify text-slate-500 text-sm mb-3'>Mobile application for handwriting classification of Korean language syllables. The model used in the application is trained using a machine learning algorithm, namely Convolutional Neural Network.</p>
-                <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
+                <ul className='text-teal-400 text-xs flex gap-1 font-bold text-[10px]' style={{ flexWrap: 'wrap' }}>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>Python</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>Flask</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>Expo</li>
@@ -260,7 +260,7 @@ export default function Home() {
                 <a className='text-slate-300 mt-2 flex cursor-pointer hover:text-teal-400 lg:hover:text-slate-300' onClick={() => handleOpenModal(4)}>Central OCR &nbsp; <span className='text-slate-500'>(Not Published)</span><RxArrowTopRight /></a>
                 <p className='text-slate-400 text-sm mb-2'>Internship Project</p>
                 <p className='text-justify text-slate-500 text-sm mb-3'>A mobile application that uses the ocr feature to perform text extraction from various types of documents.</p>
-                <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
+                <ul className='text-teal-400 text-xs flex gap-1 font-bold text-[10px]' style={{ flexWrap: 'wrap' }}>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>React Native</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>JavaScript</li>
                 </ul>
@@ -274,7 +274,7 @@ export default function Home() {
                 <a className='text-slate-300 mt-2 flex cursor-pointer hover:text-teal-400 lg:hover:text-slate-300' href='https://sei-you.vercel.app/welcome' target='_blank'>SeiYou<RxArrowTopRight /></a>
                 <p className='text-slate-400 text-sm mb-2'>Group Project</p>
                 <p className='text-justify text-slate-500 text-sm mb-3'>Application for people that like voice acting. People can upload their voice acting and search other people&apos;s voice acting.</p>
-                <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
+                <ul className='text-teal-400 text-xs flex gap-1 font-bold text-[10px]' style={{ flexWrap: 'wrap' }}>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>Ionic React</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>JavaScript</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>TypeScript</li>
@@ -291,7 +291,7 @@ export default function Home() {
                 <a className='text-slate-300 mt-2 flex cursor-pointer hover:text-teal-400 lg:hover:text-slate-300' onClick={() => handleOpenModal(2)}>Gebet App &nbsp;<span className='text-slate-500'>(Not Published)</span><RxArrowTopRight /></a>
                 <p className='text-slate-400 text-sm mb-2'>Course Project</p>
                 <p className='text-justify text-slate-500 text-sm mb-3'>Dating app-like application.</p>
-                <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
+                <ul className='text-teal-400 text-xs flex gap-1 font-bold text-[10px]' style={{ flexWrap: 'wrap' }}>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>Ionic React</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>JavaScript</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>TypeScript</li>
@@ -307,7 +307,7 @@ export default function Home() {
                 <a className='text-slate-300 mt-2 flex cursor-pointer hover:text-teal-400 lg:hover:text-slate-300' href='https://play.google.com/store/apps/details?id=quick_recipe.didi_x_djongers' target='_blank'>Quick Recipe<RxArrowTopRight /></a>
                 <p className='text-slate-400 text-sm mb-2'>Group Project</p>
                 <p className='text-justify text-slate-500 text-sm mb-3'>Mobile application to find food recipe. People can also upload their recipe.</p>
-                <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
+                <ul className='text-teal-400 text-xs flex gap-1 font-bold text-[10px]' style={{ flexWrap: 'wrap' }}>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>Java</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>XML</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>Firebase</li>
@@ -322,7 +322,7 @@ export default function Home() {
                 <a className='text-slate-300 mt-2 flex cursor-pointer hover:text-teal-400 lg:hover:text-slate-300' onClick={() => handleOpenModal(3)}>SandwichYay &nbsp;<span className='text-slate-500'>(Not Published)</span><RxArrowTopRight /></a>
                 <p className='text-slate-400 text-sm mb-2'>Group Project</p>
                 <p className='text-justify text-slate-500 text-sm mb-3'>Website to make food order. Including admin dashboard section, where admins can restock and manage transactions.</p>
-                <ul flex-wrap className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
+                <ul className='text-teal-400 text-xs flex gap-1 font-bold text-[10px]' style={{ flexWrap: 'wrap' }}>
                   {/* <li className='rounded-xl bg-cyan-950 px-2 py-1'>CodeIgniter4</li> */}
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>PHP</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>HTML</li>
@@ -340,7 +340,7 @@ export default function Home() {
                 <a className='text-slate-300 mt-2 flex cursor-pointer hover:text-teal-400 lg:hover:text-slate-300' href='https://djong-weather.vercel.app/' target='_blank'>Djongers Weather <RxArrowTopRight /></a>
                 <p className='text-slate-400 text-sm mb-2'>Group Project</p>
                 <p className='text-justify text-slate-500 text-sm mb-3'>Website to check weather of all cities around the world.</p>
-                <ul className='text-teal-400 text-xs flex flex-wrap gap-1 font-bold text-[10px]'>
+                <ul className='text-teal-400 text-xs flex gap-1 font-bold text-[10px]' style={{ flexWrap: 'wrap' }}>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>ReactJS</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>JavaScript</li>
                   <li className='rounded-xl bg-cyan-950 px-2 py-1'>HTML</li>
