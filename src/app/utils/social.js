@@ -12,7 +12,7 @@ export const social = [
     logo: BiLogoGmail,
   },
   {
-    link: "https://www.linkedin.com/in/felix-ferdinand-46392a1b7/",
+    link: "https://www.linkedin.com/in/felix-frdnnd/",
     logo: AiFillLinkedin,
   },
   {
